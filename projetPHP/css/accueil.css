@@ -83,7 +83,9 @@ form.navbar-form.navbar-right{
 h6{
 	color: #169;
 	margin-top: 2.5px;
-
+}
+h5{
+	color: #169;
 }
 .slogan {
 	margin-top: 10%;
@@ -96,7 +98,7 @@ h2{
 
 .formulaire {
 	position: relative;
-	width: 35%;
+	width: 40%;
 	height: 55%;
 	background-color: rgba(255, 255, 255, 0.8);
 	margin-right: auto;
@@ -108,6 +110,7 @@ h2{
 }
 #truc{
 	font-size: 2em;
+	margin-right: 20%;
 }
 #truc2{
 	font-size: 2em;
@@ -115,9 +118,9 @@ h2{
 	margin-bottom: 40%;
 }
 form{
-	background-size: cover;
 	text-align: center;
 	margin-top: 5%;
+	margin-left: 17.5%;
 }
 td{
 	padding-bottom: 4%;
@@ -135,6 +138,7 @@ td{
 	color: #ffffff;      
 	font-weight: normal;
 	margin-top: 2.5%;
+	margin-right: 17.5%;
 }
 #ddn{
 	width: 103.5%;
@@ -203,7 +207,7 @@ img{
 }
 @media screen and (max-width:1175px){
 	#footer{
-		height: 35%;
+		height: 37%;
 	}
 	#contenu{
 		width: 100%;
@@ -239,10 +243,118 @@ img{
 		margin-bottom: 10%;
 	}
 }
-@media screen and (max-width:770px) and (min-width:371px){
+@media screen and (max-width:572px){
+	#gris{
+		width: 100%;
+		height: 70%;
+	}
+	form{
+		width: 100%;
+		background-size: contain;
+		margin-left: 0;
+	}
+	#truc{
+		width: 50%;
+		margin-left: 20%;
+		margin-right: 0;
+	}
+	input{
+		width: 85%;
+	}
+	#ddn{
+		width: 85%;
+	}
+	td{
+		text-align: center;
+	}
+}
+@media screen and (max-width:935px) and (min-width:721px){
+	#gris{
+		width: 60%;
+		height: 73.5%;
+		margin-bottom: 0;
+		margin-top: 10%;
+		background-size: contain;
+	}
+	form{
+		width: 100%;
+		margin-left: 15%;
+		margin-bottom: 0;
+	}
+	#truc{
+		width: 50%;
+		margin-left: 19.5%;
+		text-align: center;
+	}
+	input{
+		width: 85%;
+	}
+	#ddn{
+		width: 85%;
+	}
+	#publier{
+		margin-right: 11.5%;
+	}
+	.formulaire{
+		margin-top: 0;
+		padding-right: 10%;
+	}
+	h6{
+		margin-right: 0;
+		padding-left: 40%;
+	}
+}
+@media screen and (max-width:1450px) and (min-width:936px){
+	#gris{
+		width: 50%;
+		height: 63.5%;
+		margin-bottom: 0;
+		background-size: contain;
+	}
+	#truc{
+		width: 50%;
+		margin-left: 20.5%;
+		text-align: center;
+	}
+	input{
+		width: 85%;
+	}
+	#ddn{
+		width: 85%;
+	}
+	#publier{
+		margin-right: 4%;
+	}
+	.formulaire{
+		margin-top: 0;
+	}
+	form{
+		margin-right: 16%;
+		
+	}
+}
+@media screen and (max-width:770px) and (min-width:572px){
+	#gris{
+		width: 80%;
+		height: 65.5%;
+		margin-bottom: 0;
+		background-size: contain;
+	}
 	#noidea{
 		font-size: 230%;
 		text-align: center;
 		margin-left: 0;
+	}
+	#publier{
+		margin-right: 2%;
+		margin-top: 2.6%;
+	}
+	#truc{
+		width: 50%;
+		margin-left: 24.5%;
+		text-align: center;
+	}
+	form{
+		margin-right: 20%;
 	}
 }
