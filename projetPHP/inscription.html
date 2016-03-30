@@ -9,13 +9,13 @@
 	</head>
 	<body>
 		<div class="contenuInscription">
-		<div class="titre" id="un">
-			<h1>Blin<span>D</span>ates</h1>
-		</div>
-		<div class="header">
+			<div class="titre" id="un">
+				<h1>Blin<span>D</span>ates</h1>
+			</div>
+			<div class="header">
 				<form class="navbar-form navbar-right" >
 					<div>
-						<input type="text" class="btn-group" role="group" ng-model="email" placeholder="Adresse Mail">
+						<input type="text" class="btn-group" role="group" ng-model="Pseudo" placeholder="Pseudonyme">
 						<input type="password" class="btn-group" role="group" ng-model="password" placeholder="Mot de passe">
 					</div>
 					<div>
@@ -32,6 +32,16 @@
 					<table>
 						<p id="truc">Informations <span>D</span>u compte</p>
 						<br>
+						<tr>
+							<td><label for="Genre">Genre :</label></td>
+							<td>
+								<label>
+									<input type="radio" id="radio" name="grad" value="Homme" />Homme
+								</label>
+								<label>
+									<input type="radio" id="radio" name="grad" value="Femme" />Femme
+								</label></td>
+						</tr>
 						<tr>
 							<td><label for="pseudonyme">Nom <span>D</span>e compte :</label></td>
 							<td><input type="text" placeholder="Pseudonyme" name="pseudo" id="pseudo"/></td>
@@ -75,57 +85,55 @@
 							<td><label for="depart">Votre <span>D</span>épartement :</label></td>
 							<td><input type="text" placeholder="Département" name="depart" id="depart"/></td>
 						</tr>
-
 					</table>
-
 					<input type="submit" name="register" value="S'inscrire" id="publier"/>
 				</form>
 			</div>
 		</div>
 		<footer>
-	<div id="footer">
-		<div class="container">
-			<div class="row">
-				<div class="contactinfo col-sm-3 main-el">
-					<div class="divider divider-5">
-						<h5>Contact Info</h5>
+			<div id="footer">
+				<div class="container">
+					<div class="row">
+						<div class="contactinfo col-sm-3 main-el">
+							<div class="divider divider-5">
+								<h5>Contact Info</h5>
+							</div>
+							<div class="contact-widget">
+								<div class="line">
+									<i class="address"></i> <div class="text">27 avenue de Fontarrabie 75020 Paris</div>
+								</div>
+								<div class="line">
+									<i class="phone"></i>
+									<div class="text">01.64.49.72.11</div>
+								</div>
+								<div class="line">
+									<i class="mail"></i>
+									<div class="text">contact @ BlinDates.com</div>
+								</div>
+								<div class="line">
+									<i class="site"></i>
+									<div class="text"><a href="" target="_blank">www.BlinDates.com</a></div>
+								</div>
+							</div>
+						</div><div class=" col-sm-3 main-el">
+						<div class="textwidget"><div class="divider divider-5"><h5>Services</h5><div class="separator"></div></div>
+							<i class="bas"></i><a href="" title="Partenaires">Partenaires</a>
+							<br/><i class="bas"></i><a href="" title="espaces publicitaires localisés">Espaces publicitaires</a><br/><i class="bas"></i>
+							<a href="">Comment ça marche ?</a><br/>
+						</div>
+						</div>
 					</div>
-					<div class="contact-widget">
-						<div class="line">
-							<i class="address"></i> <div class="text">27 avenue de Fontarrabie 75020 Paris</div>
-						</div>
-						<div class="line">
-							<i class="phone"></i>
-							<div class="text">01.64.49.72.11</div>
-						</div>
-						<div class="line">
-							<i class="mail"></i>
-							<div class="text">contact @ BlinDates.com</div>
-						</div>
-						<div class="line">
-							<i class="site"></i>
-							<div class="text"><a href="" target="_blank">www.BlinDates.com</a></div>
-						</div>
-					</div>
-				</div><div class=" col-sm-3 main-el">
-				<div class="textwidget"><div class="divider divider-5"><h5>Services</h5><div class="separator"></div></div>
-					<i class="bas"></i><a href="" title="Partenaires">Partenaires</a>
-					<br/><i class="bas"></i><a href="" title="espaces publicitaires localisés">Espaces publicitaires</a><br/><i class="bas"></i>
-					<a href="">Comment ça marche ?</a><br/>
 				</div>
+				<br>
+				<div id="botbar">
+					<div class="container">
+						<p class="copyright-text">
+							&#169; Copyright 2016 - <a href="/mentions-legales">Mentions légales</a> - <a href="/conditions-generales-dutilisation">Conditions générales
+							d'utilisation</a>
+						</p>     
+					</div>
 				</div>
 			</div>
-		</div>
-		<br>
-		<div id="botbar">
-			<div class="container">
-				<p class="copyright-text">
-					&#169; Copyright 2016 - <a href="/mentions-legales">Mentions légales</a> - <a href="/conditions-generales-dutilisation">Conditions générales
-					d'utilisation</a>
-				</p>     
-			</div>
-		</div>
-	</div>
-</footer>
+		</footer>
 	</body>	
 </html>	
