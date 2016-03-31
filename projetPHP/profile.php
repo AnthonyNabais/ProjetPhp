@@ -4,33 +4,10 @@ session_start();
 $bdd = new PDO('mysql:host=127.0.0.1;dbname=users', 'root', 'root');
 
 
-if(isset($_POST['formconnect']))
+if(isset($_SESSION['id']))
+
 {
-	$pseudoconnect = htmlspecialchars($_POST['pseudoconnect']);
-	$mdpconnect = sha1($_POST['mdpconnect']);
-	if(!empty($pseudoconnect) AND !empty($mdpconnect))
-	{
-		$requser = $bdd->prepare("SELECT * FROM inscription WHERE pseudo = ? AND mdp = ?");
-		$requser->execute(array($pseudoconnect, $mdpconnect));
-		$userexist = $requser->rowCount();
-		if($userexist == 1)
-		{
-			$userinfo = $requser->fetch();
-			$_SESSION['id'] = $userinfo['id'];
-			$_SESSION['pseudo'] = $userinfo['pseudo'];
-			$_SESSION['mail'] = $userinfo['mail'];
-			header("Location: connect.php?id=".$_SESSION['id']);
-		}
-		else
-		{
-			$erreur = "mauvais pseudo ou mot de passe";
-		}
-	}
-	else
-	{
-		$erreur = "Vous devez rentrer votre pseudo et votre mot de passe";
-	}
-}
+	
 
 ?>
 
@@ -50,32 +27,8 @@ if(isset($_POST['formconnect']))
 			<div class="titre" id="un">
 				<h1>Blin<span>D</span>ates</h1>
 			</div>
-			<div class="header">
-				<form class="navbar-form navbar-right" method="POST" action="" >
-					<div>
-						<input type="text" class="btn-group" role="group" ng-model="Pseudo" name="pseudoconnect" placeholder="Pseudonyme">
-						<input type="password" class="btn-group" role="group" ng-model="password" name="mdpconnect" placeholder="Mot de passe">
-					</div>
-					<div>
-						<button type="submit" class="btn btn-default navbar-btn" name="formconnect">Connexion</button>
-						<a href="signup.php"><button ui-sref="register" type="button" class="btn btn-default navbar-btn">Inscription</button></a>
-						<a ui-sref="resetpass">
-							<h6>Mot de Passe oublié ?</h6>
-						</a>
-						<?php
-			  		  		if(isset($erreur))
-			  		  		{
-			  		  			echo $erreur;
-			  		  		}
-			  		    ?>
-					</div>
-				</form>
-			</div>
-			<div class="slogan">
-				<h2>Blin<span>D</span>ates, un site de rencontre simple est efficace</h2>
-			</div>
-			<a href="inscription.html" class="btn"></a>
 		</div>
+
 		<footer>
 			<div id="footer">
 				<div class="container">
@@ -124,3 +77,12 @@ if(isset($_POST['formconnect']))
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	</body>
 </html>	
+
+
+<?php
+}
+else
+{
+	header("Location: index.php");
+}
+?>

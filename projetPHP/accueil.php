@@ -37,7 +37,7 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
 		{
 		?>
 			<h4>Profil de <?php echo $userinfo['pseudo']; ?></h4>
-			<a href="#">Editer mon profil</a>
+			<a href="profile.php">Editer mon profil</a>
 			<a href="deconnexion.php">me déconnecter</a>
 
 

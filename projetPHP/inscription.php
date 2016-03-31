@@ -183,7 +183,9 @@ if(isset($_POST['forminscription']))
 
 			           		 <tr>
 			           		 	<td></td>
-			           		 	<td><input type="submit" name="forminscription" value="S'inscrire"/></td>
+			           		 	<td><input type="submit" name="forminscription" value="S'inscrire"></td>
+			           		 	<td></td>
+			           		 	<td><a href="index.php">Retourez à l'accueil</a></td>
 			           		 </tr>
 				            
 				            </table>
