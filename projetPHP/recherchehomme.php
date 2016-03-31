@@ -40,18 +40,17 @@ if(isset($_SESSION['id']))
 							<td id="td">Sexe : <label for="Genre"><?php echo $user['sex']; ?></label></td>
 						</tr>
 						<tr>
-							<td id="td">Pseudonyme : <label for="pseudonyme"><?php echo $user['pseudo']; ?></label></td>
+							<td id="td">Pseu<span>D</span>onyme : <label for="pseudonyme"><?php echo $user['pseudo']; ?></label></td>
 						</tr>
 						<tr>
-							<td id="td">Adresse Mail : <label for="email"><?php echo $user['mail']; ?></label></td>
+							<td id="td">A<span>D</span>resse Mail : <label for="email"><?php echo $user['mail']; ?></label></td>
 						</tr>
 						<tr>
-							<td id="td">Date de Naissance : <label for="ddn"><?php echo $user['ddn']; ?></label></td>
+							<td id="td"><span>D</span>ate <span>D</span>e Naissance : <label for="ddn"><?php echo $user['ddn']; ?></label></td>
 						</tr>
 						<tr>
-							<td id="tds">Département : <label for="depart"><?php echo $user['departement']; ?></label></td>
-						</tr>
-					</table>
+							<td id="tds"><span>D</span>épartement : <label for="depart"><?php echo $user['departement']; ?></label></td>
+						</tr>					</table>
 					<a href="profile.php"><input type="submit" name="register" value="Modifier mon Profil" id="publier2"/></a>
 					<input type="submit" name="register" value="Mes Messages" id="publier2"/>
 					<br>
@@ -65,7 +64,7 @@ if(isset($_SESSION['id']))
 				<p class="amesoeurtext"><span>D</span>escription: J'aime les vidéos de phoques sur internet et la planche a voile</p>
 			</div>
 				<a href="recherchehommme.php"><input type="submit" name="register" value="Nouvelle recherche" id="publier3"/></a>
-				<a href="connect.php"><input type="submit" name="register" value="Retour accueil" id="publier4"/></a>
+				<a href="connect.php?id=9"><input type="submit" name="register" value="Retour Accueil" id="publier4"/></a>
 		</div>
 
 

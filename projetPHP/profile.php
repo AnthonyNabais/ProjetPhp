@@ -90,19 +90,33 @@ if(isset($_SESSION['id']))
 				<h3>Profil de <?php echo $user['pseudo']; ?></h3>
 			</div>
 			<form action="" method="POST" id="formulaire3">
-				<label for="">Pseu<span>D</span>o :</label>
-				<input id="profil2" type="text" name="newpseudo" placeholder="Nouveau pseudo" value="<?php echo $user['pseudo']; ?>"><br>
-				<label for="">A<span>D</span>resse Mail :</label>
-				<input id="profil" type="text" name="newmail" placeholder="Nouveau mail" value="<?php echo $user['mail']; ?>"><br>
-				<label for=""><span>D</span>épartement :</label>
-				<input id="profil" type="text" name="newdepartement" placeholder="Nouveau departement" value="<?php echo $user['departement']; ?>"><br>
-				<label for="">Nouveau Mot <span>D</span>e Passe :</label>
-				<input id="profil" type="password" name="newmdp" placeholder="Nouveau Mot de Passe"><br>
-				<label for="">Confirmation Mot <span>D</span>e Passe :</label>
-				<input id="profil" type="password" name="newmdp2" placeholder="Confirmez Mot de Passe"><br>
-				<label for=""><span>D</span>escription :</label><br>
-				<textarea class="form-control" rows="7"></textarea>
-				<input type="submit" value="Confirmer" id="publier">
+			<br>
+				<table>
+					<tr>
+						<td><label for="">Pseu<span>D</span>o :	</label></td>
+						<td><input id="profil2" type="text" name="newpseudo" placeholder="Nouveau pseudo" value="<?php echo $user['pseudo']; ?>"><br></td>
+					</tr>
+					<tr>
+						<td><label for="">A<span>D</span>resse Mail :	</label></td>
+						<td><input id="profil" type="text" name="newmail" placeholder="Nouveau mail	" value="<?php echo $user['mail']; ?>"><br></td>
+					</tr>
+					<tr>
+						<td><label for=""><span>D</span>épartement :   </label></td>
+						<td><input id="profil" type="text" name="newdepartement" placeholder="Nouveau departement" value="<?php echo $user['departement']; ?>"><br></td>
+					</tr>
+					<tr>
+						<td><label for="">Nouveau Mot <span>D</span>e Passe :</label></td>
+						<td><input id="profil" type="password" name="newmdp" placeholder="Nouveau Mot de Passe"><br></td>
+					</tr>
+					<tr>
+						<td><label for="">Confirmation Mot <span>D</span>e Passe :</label></td>
+						<td><input id="profil" type="password" name="newmdp2" placeholder="Confirmez Mot de Passe"><br></td>
+					</tr>
+					</table>
+						<label for=""><span>D</span>escription :</label><br>
+						<textarea class="form-control" rows="7"></textarea>
+					
+						<input type="submit" value="Confirmer" id="publier">
 			</form>
 			<?php
 			  		  if(isset($erreur))

@@ -110,7 +110,7 @@ h2{
 .formulaire {
 	position: relative;
 	width: 35%;
-	height: 458px;
+	height: 500px;
 	background-color: rgba(255, 255, 255, 0.8);
 	margin-right: auto;
 	margin-left: auto;
@@ -121,6 +121,7 @@ h2{
 }
 #truc{
 	font-size: 2em;
+	margin-top: 2%;
 }
 #truc2{
 	font-size: 3em;
@@ -180,7 +181,7 @@ input#profil{
 div#gris2.formulaire2{
 	position: absolute;
 	width: 17%;
-	height: 102.4%;
+	height: 103%;
 	background-color: rgba(255, 255, 255, 0.8);
 	background-color: lightgray;
 	border: 1px solid dimgrey;
@@ -193,7 +194,7 @@ div#gris2.formulaire2{
 	margin-left: 35%;
 	width: 30%;
 	height: 500px;
-	margin-top: 2%;
+	margin-top: 1%;
 }
 #publier2{
 	width: 150px;
@@ -240,6 +241,23 @@ div#gris2.formulaire2{
 img{
 	margin-left: 40%;
 	margin-top: 5%;
+}
+.amesoeur{
+    height: 400px;
+    width: 400px;
+    top: 150px;
+    margin-left: 40%;
+    margin-right: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.amesoeurtext{
+    font-size: 18px;
+    text-align: center;
+    color: black;
+    position: relative;
+    top: 100px;
+    margin-top: 20px;
 }
 @media screen and (max-width:1175px){
 	#footer{

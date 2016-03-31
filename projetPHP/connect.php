@@ -66,8 +66,8 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
 					</div>
 					<div>
 						<img src="images/couple.jpg">
-						<input type="submit" name="register" value="Recherche Homme" id="publier3"/>
-						<input type="submit" name="register" value="Recherche Femme" id="publier4"/>
+						<a href="recherchehomme.php"><input type="submit" name="register" value="Recherche homme" id="publier3"/></a>
+						<a href="recherchefemme.php"><input type="submit" name="register" value="Recherche femme" id="publier4"/></a>
 					</div>
 				</div>
 			<footer>

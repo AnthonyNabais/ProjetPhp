@@ -40,16 +40,16 @@ if(isset($_SESSION['id']))
 							<td id="td">Sexe : <label for="Genre"><?php echo $user['sex']; ?></label></td>
 						</tr>
 						<tr>
-							<td id="td">Pseudonyme : <label for="pseudonyme"><?php echo $user['pseudo']; ?></label></td>
+							<td id="td">Pseu<span>D</span>onyme : <label for="pseudonyme"><?php echo $user['pseudo']; ?></label></td>
 						</tr>
 						<tr>
-							<td id="td">Adresse Mail : <label for="email"><?php echo $user['mail']; ?></label></td>
+							<td id="td">A<span>D</span>resse Mail : <label for="email"><?php echo $user['mail']; ?></label></td>
 						</tr>
 						<tr>
-							<td id="td">Date de Naissance : <label for="ddn"><?php echo $user['ddn']; ?></label></td>
+							<td id="td"><span>D</span>ate <span>D</span>e Naissance : <label for="ddn"><?php echo $user['ddn']; ?></label></td>
 						</tr>
 						<tr>
-							<td id="tds">Département : <label for="depart"><?php echo $user['departement']; ?></label></td>
+							<td id="tds"><span>D</span>épartement : <label for="depart"><?php echo $user['departement']; ?></label></td>
 						</tr>
 					</table>
 					<a href="profile.php"><input type="submit" name="register" value="Modifier mon Profil" id="publier2"/></a>
@@ -59,13 +59,13 @@ if(isset($_SESSION['id']))
 				</div>
 			</div>
 			<div class="amesoeur">
-				<p class="amesoeurtext">Pseu<span>D</span>o: Miss trésor</p>
+				<p class="amesoeurtext">Pseu<span>D</span>o: Miss Trésor</p>
 				<p class="amesoeurtext">Age: 19 ans</p>
 				<p class="amesoeurtext"><span>D</span>epartement: 01</p>
-				<p class="amesoeurtext"><span>D</span>escription: Je suis très compliqué et j'aime la couleur rose</p>
+				<p class="amesoeurtext"><span>D</span>escription: Je suis très compliquée et j'aime la couleur rose</p>
 			</div>
 				<a href="recherchefemmme.php"><input type="submit" name="register" value="Nouvelle recherche" id="publier3"/></a>
-				<a href="connect.php"><input type="submit" name="register" value="Retour accueil" id="publier4"/></a>
+				<a href="connect.php?id=9"><input type="submit" name="register" value="Retour Accueil" id="publier4"/></a>
 		</div>
 
 
