@@ -46,28 +46,28 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
 									<td id="td">Sexe : <label for="Genre"><?php echo $userinfo['sex']; ?></label></td>
 								</tr>
 								<tr>
-									<td id="td">Pseudonyme : <label for="pseudonyme"><?php echo $userinfo['pseudo']; ?></label></td>
+									<td id="td">Pseu<span>D</span>onyme : <label for="pseudonyme"><?php echo $userinfo['pseudo']; ?></label></td>
 								</tr>
 								<tr>
-									<td id="td">Adresse Mail : <label for="email"><?php echo $userinfo['mail']; ?></label></td>
+									<td id="td">A<span>D</span>resse Mail : <label for="email"><?php echo $userinfo['mail']; ?></label></td>
 								</tr>
 								<tr>
-									<td id="td">Date de Naissance : <label for="ddn"><?php echo $userinfo['ddn']; ?></label></td>
+									<td id="td"><span>D</span>ate <span>D</span>e Naissance : <label for="ddn"><?php echo $userinfo['ddn']; ?></label></td>
 								</tr>
 								<tr>
-									<td id="tds">Département : <label for="depart"><?php echo $userinfo['departement']; ?></label></td>
+									<td id="tds"><span>D</span>épartement : <label for="depart"><?php echo $userinfo['departement']; ?></label></td>
 								</tr>
 							</table>
 							<a href="profile.php"><input type="submit" name="register" value="Modifier mon Profil" id="publier2"/></a>
 							<input type="submit" name="register" value="Mes Messages" id="publier2"/>
 							<br>
-							<a href="deconnexion.php"><h4>Me déconnecter<h4></a>
+							<a href="deconnexion.php"><h4>Me <span>D</span>éconnecter<h4></a>
 						</div>
 					</div>
 					<div>
 						<img src="images/couple.jpg">
-						<input type="submit" name="register" value="Recherche Homme" id="publier3"/>
-						<input type="submit" name="register" value="Recherche Femme" id="publier4"/>
+						<a href="recherchehomme.php"><input type="submit" name="register" value="Recherche homme" id="publier3"/></a>
+						<a href="recherchefemme.php"><input type="submit" name="register" value="Recherche femme" id="publier4"/></a>
 					</div>
 				</div>
 			<footer>

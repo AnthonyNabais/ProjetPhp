@@ -1,14 +1,75 @@
 <?php
 session_start();
-
 $bdd = new PDO('mysql:host=127.0.0.1;dbname=users', 'root', 'root');
-
-
 if(isset($_SESSION['id']))
-
 {
-	
-
+	$requser = $bdd->prepare('SELECT * FROM inscription WHERE id = ?');
+	$requser->execute(array($_SESSION['id']));
+	$user = $requser->fetch();
+	if(!empty($_POST['newpseudo']))
+	{
+		$reqpseudo = $bdd->prepare("SELECT * FROM inscription WHERE pseudo = ?");
+		$reqpseudo->execute(array($_POST['newpseudo']));
+		$pseudoexist = $reqpseudo->rowCount();
+		
+		if($pseudoexist == 0)
+		{	
+			$newpseudo = htmlspecialchars($_POST['newpseudo']);
+			$insertpseudo = $bdd->prepare("UPDATE inscription SET pseudo = ? WHERE id = ?");
+			$insertpseudo->execute(array($newpseudo, $_SESSION['id']));
+			header('Location: connect.php?id='.$_SESSION['id']);
+		}
+		else
+		{
+			$erreur = "Pseudo déja utilisé";
+		}
+	}
+	if(!empty($_POST['newmail']))
+	{
+		if (filter_var($_POST['newmail'], FILTER_VALIDATE_EMAIL))
+		{
+			$reqmail = $bdd->prepare("SELECT * FROM inscription WHERE mail = ?");
+			$reqmail->execute(array($_POST['newmail']));
+			$mailexist = $reqmail->rowCount();
+			
+			if($mailexist == 0)
+			{
+				$newmail = htmlspecialchars($_POST['newmail']);
+				$insertmail = $bdd->prepare("UPDATE inscription SET mail = ? WHERE id = ?");
+				$insertmail->execute(array($newmail, $_SESSION['id']));
+				header('Location: connect.php?id='.$_SESSION['id']);
+			}
+			else
+			{
+				$erreur = "Adresse mail déja utilisée";
+			}
+		}
+		else
+		{
+			$erreur = "Adresse mail non valide";
+		}
+		
+	}
+	if(isset($_POST['newmdp']) AND !empty($_POST['newmdp']) AND isset($_POST['newmdp2']) AND !empty($_POST['newmdp2']))
+	{
+		$mdp = sha1($_POST['newmdp']);
+		$mdp2 = sha1($_POST['newmdp2']);
+		if($mdp == $mdp2)
+		{
+			$insertmdp = $bdd->prepare("UPDATE inscription SET mdp = ? WHERE id = ?");
+			$insertmdp->execute(array($mdp, $_SESSION['id']));
+			header('Location: connect.php?id='.$_SESSION['id']);
+		}
+		else
+		{
+			$erreur= "Vos mots de passe sont différents";
+		}
+		
+	}
+	if(isset($_POST['newpseudo']) AND $_POST['newpseudo'] == $user['pseudo'])
+	{
+		header('Location: connect.php?id='.$_SESSION['id']);
+	}
 ?>
 
 
@@ -26,8 +87,45 @@ if(isset($_SESSION['id']))
 		<div class="contenu">
 			<div class="titre" id="un">
 				<h1>Blin<span>D</span>ates</h1>
+				<h3>Profil de <?php echo $user['pseudo']; ?></h3>
 			</div>
+			<form action="" method="POST" id="formulaire3">
+			<br>
+				<table>
+					<tr>
+						<td><label for="">Pseu<span>D</span>o :	</label></td>
+						<td><input id="profil2" type="text" name="newpseudo" placeholder="Nouveau pseudo" value="<?php echo $user['pseudo']; ?>"><br></td>
+					</tr>
+					<tr>
+						<td><label for="">A<span>D</span>resse Mail :	</label></td>
+						<td><input id="profil" type="text" name="newmail" placeholder="Nouveau mail	" value="<?php echo $user['mail']; ?>"><br></td>
+					</tr>
+					<tr>
+						<td><label for=""><span>D</span>épartement :   </label></td>
+						<td><input id="profil" type="text" name="newdepartement" placeholder="Nouveau departement" value="<?php echo $user['departement']; ?>"><br></td>
+					</tr>
+					<tr>
+						<td><label for="">Nouveau Mot <span>D</span>e Passe :</label></td>
+						<td><input id="profil" type="password" name="newmdp" placeholder="Nouveau Mot de Passe"><br></td>
+					</tr>
+					<tr>
+						<td><label for="">Confirmation Mot <span>D</span>e Passe :</label></td>
+						<td><input id="profil" type="password" name="newmdp2" placeholder="Confirmez Mot de Passe"><br></td>
+					</tr>
+					</table>
+						<label for=""><span>D</span>escription :</label><br>
+						<textarea class="form-control" rows="7"></textarea>
+					
+						<input type="submit" value="Confirmer" id="publier">
+			</form>
+			<?php
+			  		  if(isset($erreur))
+			  		  {
+			  		  	echo '<font color="red">'.$erreur."</font>";
+			  		  }
+			  	?>
 		</div>
+		
 
 		<footer>
 			<div id="footer">

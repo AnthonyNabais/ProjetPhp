@@ -123,7 +123,6 @@ if(isset($_POST['forminscription']))
 								</label>
 							</td>
 						</tr>
-
 						<tr>
 				            
 					        <td><label for="nom">Votre Nom :</label></td>
@@ -184,8 +183,6 @@ if(isset($_POST['forminscription']))
 					        <td><label for="departement">Votre <span>D</span>épartement :</label></td>
 					        <td><input type="text" placeholder="Votre département" name="departement" id="departement" value="<?php if(isset($departement)) {echo $departement;} ?>"/></td>
 			            </tr>
-
-
 			           	<tr>
 			           		<td></td>
 			           	</tr>
