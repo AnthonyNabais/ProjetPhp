@@ -43,24 +43,25 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
 								<p id="truc2">Informations <span>D</span>u Compte</p>
 								<br>
 								<tr>
-									<td id="td"><label for="Genre"><?php echo $userinfo['sex']; ?></label></td>
+									<td id="td">Sexe : <label for="Genre"><?php echo $userinfo['sex']; ?></label></td>
 								</tr>
 								<tr>
-									<td id="td"><label for="pseudonyme"><?php echo $userinfo['pseudo']; ?></label></td>
+									<td id="td">Pseu<span>D</span>onyme : <label for="pseudonyme"><?php echo $userinfo['pseudo']; ?></label></td>
 								</tr>
 								<tr>
-									<td id="td"><label for="email"><?php echo $userinfo['mail']; ?></label></td>
+									<td id="td">A<span>D</span>resse Mail : <label for="email"><?php echo $userinfo['mail']; ?></label></td>
 								</tr>
 								<tr>
-									<td id="td"><label for="ddn"><?php echo $userinfo['ddn']; ?></label></td>
+									<td id="td"><span>D</span>ate <span>D</span>e Naissance : <label for="ddn"><?php echo $userinfo['ddn']; ?></label></td>
 								</tr>
 								<tr>
-									<td id="td"><label for="depart"><?php echo $userinfo['departement']; ?></label></td>
+									<td id="tds"><span>D</span>épartement : <label for="depart"><?php echo $userinfo['departement']; ?></label></td>
 								</tr>
 							</table>
 							<a href="profile.php"><input type="submit" name="register" value="Modifier mon Profil" id="publier2"/></a>
 							<input type="submit" name="register" value="Mes Messages" id="publier2"/>
-							<a href="deconnexion.php">Me déconnecter</a>
+							<br>
+							<a href="deconnexion.php"><h4>Me <span>D</span>éconnecter<h4></a>
 						</div>
 					</div>
 					<div>

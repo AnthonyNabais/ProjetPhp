@@ -59,22 +59,18 @@ if(isset($_POST['formconnect']))
 					<div>
 						<button type="submit" class="btn btn-default navbar-btn" name="formconnect">Connexion</button>
 						<a href="signup.php"><button ui-sref="register" type="button" class="btn btn-default navbar-btn">Inscription</button></a>
-						<a ui-sref="resetpass">
-							<h6>Mot de Passe oublié ?</h6>
-						</a>
 						<?php
 			  		  		if(isset($erreur))
 			  		  		{
-			  		  			echo $erreur;
+			  		  			echo '<font color="red">'.$erreur."</font>";
 			  		  		}
 			  		    ?>
 					</div>
 				</form>
 			</div>
 			<div class="slogan">
-				<h2>Blin<span>D</span>ates, un site de rencontre simple est efficace</h2>
+				<h2>Blin<span>D</span>ates, un site de rencontre simple et efficace</h2>
 			</div>
-			<a href="inscription.html" class="btn"></a>
 		</div>
 		<footer>
 			<div id="footer">

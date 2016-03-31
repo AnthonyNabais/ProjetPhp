@@ -8,7 +8,6 @@ span {
 	background-size: cover;
 	margin-top: 0;
 }
-
 .menu{
 	height: 30px;
 	line-height: 40px;
@@ -22,6 +21,7 @@ h1{
 	text-align: center;
 	font-size: 3.5em;
 	margin-right: 1%;
+	margin-top: 0;
 }
 h6{
 	float: right;
@@ -33,22 +33,26 @@ h6{
 form.navbar-form.navbar-right{
 	margin-right: 3%;
 	margin-top: -8%;
-	width: 225px;
+	width: 240px;
 	position: relative;
 }
 .btn-group{
 	text-align: center;
-	height: 30px;
-	width: 92px;
+	height: 34px;
+	width: 100px;
+	margin-top: 3%;
+	margin-bottom: 1%;
+	border: 1px solid black;
 }
 .btn{
 	text-align: center;
-	height: 30px;
-	width: 92px;
+	height: 34px;
+	width: 100px;
+	border: 1px solid black;
 }
 
 .contenu {
-	background-image: url(../images/fond.jpg);
+	background: url(../images/fond.jpg)no-repeat center fixed;
 	width: 100%;
 	height: 100%;
 	background-size:cover;
@@ -58,21 +62,25 @@ form.navbar-form.navbar-right{
 	color: black;
 	text-align: center;
 	font-size: 3em;
+	font-family: Bodoni MT;
+	font-style: italic;
 }
 #noidea{
 	text-align: center;
 	font-size: 3.5em;
 	margin-top: 0;
+	color: black;
 }
-
+input{
+	margin-bottom: 5%;
+	text-align: center;
+}
 #footer{
 	background-color: black;
 	color: black;
 	position: relative;
 	clear:both;
-	margin-top: 0px;
 	height: 180px;
-
 }
 .line{
 	color: #169;
@@ -83,6 +91,11 @@ form.navbar-form.navbar-right{
 h6{
 	color: #169;
 	margin-top: 2.5px;
+
+}
+h5{
+	font-size: 1.5em;
+	color: #169;
 
 }
 .slogan {
@@ -96,9 +109,8 @@ h2{
 
 .formulaire {
 	position: relative;
-	top:-250px;
 	width: 35%;
-	height: 55%;
+	height: 458px;
 	background-color: rgba(255, 255, 255, 0.8);
 	margin-right: auto;
 	margin-left: auto;
@@ -111,17 +123,24 @@ h2{
 	font-size: 2em;
 }
 #truc2{
-	font-size: 2em;
-	margin-top: 30%;
-	margin-bottom: 40%;
+	font-size: 3em;
+	margin-top: 50%;
+	margin-bottom: 25%;
 }
 form{
 	background-size: cover;
 	text-align: center;
-	margin-top: 5%;
+}
+td#td{
+	padding-bottom: 4%;
+	padding-left: 10%;
+
+}
+td#tds{
+	padding-bottom: 10%;
+	padding-left: 10%;
 }
 td{
-	padding-bottom: 4%;
 	text-align: center;
 }
 #publier{
@@ -138,33 +157,53 @@ td{
 	margin-top: 2.5%;
 }
 #ddn{
-	width: 103.5%;
+	width: 100%;
 }
 div#gris.formulaire{
 	margin-top: 10%;
 }
 h3{
 	color: deeppink;
+	font-size: 2em;
+}
+textarea.form-control{
+	width: 60%;
+	margin-left: 20%;
+}
+input#profil2{
+	margin-bottom: 2%;
+	margin-top: 5%;
+}
+input#profil{
+	margin-bottom: 2%;
 }
 div#gris2.formulaire2{
 	position: absolute;
-	width: 10%;
-	height: 100%;
+	width: 17%;
+	height: 102.4%;
 	background-color: rgba(255, 255, 255, 0.8);
 	background-color: lightgray;
 	border: 1px solid dimgrey;
 	text-align: center;
-	float: left;
+	margin-top: -12%;
+	margin-left: 0;
+}
+#formulaire3{
+	background-color: lightgray;
+	margin-left: 35%;
+	width: 30%;
+	height: 500px;
+	margin-top: 2%;
 }
 #publier2{
-	width: 90%;
-	height: 5%;
+	width: 150px;
+	height: 30px;
 	text-align: center;
 	font-size: 1.1em;
 	background-color: orange;
 	border-color: orange; 
 	border-style: solid;  
-	border-width: 1px;   
+	border-width: 1px;
 	color: #ffffff;      
 	font-weight: normal;
 	margin-top: 2%;
@@ -204,12 +243,25 @@ img{
 }
 @media screen and (max-width:1175px){
 	#footer{
-		height: 35%;
+		height: 40%;
 	}
 	#contenu{
 		width: 100%;
 		height: 100%;
 	}
+}
+@media screen and (max-width:700px){
+	h1{
+		font-size: 2em;
+	}
+	h2{
+		font-size: 3.5em;
+	}
+	#gris.formulaire{
+		height: 75%;
+	}
+	form{
+	}	
 }
 @media screen and (max-width:908px){
 	#noidea{
@@ -221,17 +273,21 @@ img{
 		font-size: 150%;
 		margin-left: 0;
 	}
-	h2{
-		font-size: 3.5em;
-	}
 	form.navbar-form.navbar-right{
 		margin-top: 10%;
 		margin-bottom: 10%;
 	}
+
 }
-@media screen and (max-width:370px){
+@media screen and (max-width:550px){
 	form.navbar-form.navbar-right{
 		width: 100%;
+		margin-top: 10%;
+	}
+}
+@media screen and (max-width:722px) and (min-width:551px){
+	form.navbar-form.navbar-right{
+		margin-top: 5%;
 	}
 }
 	
@@ -240,10 +296,131 @@ img{
 		margin-bottom: 10%;
 	}
 }
-@media screen and (max-width:770px) and (min-width:371px){
+@media screen and (max-width:572px){
+	#gris{
+		width: 100%;
+		height: 70%;
+	}
+	form{
+		width: 100%;
+		background-size: contain;
+		margin-left: 0;
+	}
+	#truc{
+		width: 50%;
+		margin-left: 20%;
+		margin-right: 0;
+	}
+	input{
+		width: 85%;
+	}
+	#ddn{
+		width: 85%;
+	}
+	td{
+		text-align: center;
+	}
+}
+@media screen and (max-width:935px) and (min-width:721px){
+	#gris{
+		width: 60%;
+		height: 73.5%;
+		margin-bottom: 0;
+		margin-top: 10%;
+		background-size: contain;
+	}
+	form{
+		width: 100%;
+		margin-left: 15%;
+		margin-bottom: 0;
+	}
+	form.navbar-form.navbar-right{
+		margin-top: 5%;
+		margin-bottom: 5%;
+	}
+	#truc{
+		width: 50%;
+		margin-left: 19.5%;
+		text-align: center;
+	}
+	h2{
+		padding-top: 13%;
+	}
+	input{
+		width: 85%;
+	}
+	#ddn{
+		width: 85%;
+	}
+	#publier{
+		margin-right: 11.5%;
+	}
+	.formulaire{
+		margin-top: 0;
+		padding-right: 10%;
+	}
+	h6{
+		margin-right: 0;
+		padding-left: 40%;
+	}
+}
+@media screen and (max-width:1450px) and (min-width:936px){
+	#gris{
+		width: 50%;
+		height: 63.5%;
+		margin-bottom: 0;
+		background-size: contain;
+	}
+	form.navbar-form.navbar-right{
+		margin-top: 5%;
+	}
+	h2{
+		padding-top: 6%;
+	}
+	#truc{
+		width: 50%;
+		margin-left: 20.5%;
+		text-align: center;
+	}
+	input{
+		width: 85%;
+	}
+	#ddn{
+		width: 85%;
+	}
+	#publier{
+		margin-right: 4%;
+	}
+	.formulaire{
+		margin-top: 0;
+	}
+	form{
+		margin-right: 16%;
+		
+	}
+}
+@media screen and (max-width:770px) and (min-width:572px){
+	#gris{
+		width: 80%;
+		height: 65.5%;
+		margin-bottom: 0;
+		background-size: contain;
+	}
 	#noidea{
 		font-size: 230%;
 		text-align: center;
 		margin-left: 0;
+	}
+	#publier{
+		margin-right: 2%;
+		margin-top: 2.6%;
+	}
+	#truc{
+		width: 50%;
+		margin-left: 24.5%;
+		text-align: center;
+	}
+	form{
+		margin-right: 20%;
 	}
 }

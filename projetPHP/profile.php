@@ -1,22 +1,16 @@
 <?php
 session_start();
-
 $bdd = new PDO('mysql:host=127.0.0.1;dbname=users', 'root', 'root');
-
-
 if(isset($_SESSION['id']))
-
 {
 	$requser = $bdd->prepare('SELECT * FROM inscription WHERE id = ?');
 	$requser->execute(array($_SESSION['id']));
 	$user = $requser->fetch();
-
 	if(!empty($_POST['newpseudo']))
 	{
 		$reqpseudo = $bdd->prepare("SELECT * FROM inscription WHERE pseudo = ?");
 		$reqpseudo->execute(array($_POST['newpseudo']));
 		$pseudoexist = $reqpseudo->rowCount();
-
 		
 		if($pseudoexist == 0)
 		{	
@@ -30,7 +24,6 @@ if(isset($_SESSION['id']))
 			$erreur = "Pseudo déja utilisé";
 		}
 	}
-
 	if(!empty($_POST['newmail']))
 	{
 		if (filter_var($_POST['newmail'], FILTER_VALIDATE_EMAIL))
@@ -57,12 +50,10 @@ if(isset($_SESSION['id']))
 		}
 		
 	}
-
 	if(isset($_POST['newmdp']) AND !empty($_POST['newmdp']) AND isset($_POST['newmdp2']) AND !empty($_POST['newmdp2']))
 	{
 		$mdp = sha1($_POST['newmdp']);
 		$mdp2 = sha1($_POST['newmdp2']);
-
 		if($mdp == $mdp2)
 		{
 			$insertmdp = $bdd->prepare("UPDATE inscription SET mdp = ? WHERE id = ?");
@@ -79,7 +70,6 @@ if(isset($_SESSION['id']))
 	{
 		header('Location: connect.php?id='.$_SESSION['id']);
 	}
-
 ?>
 
 
@@ -97,23 +87,23 @@ if(isset($_SESSION['id']))
 		<div class="contenu">
 			<div class="titre" id="un">
 				<h1>Blin<span>D</span>ates</h1>
-				<h3>profil de <?php echo $user['pseudo']; ?></h3>
+				<h3>Profil de <?php echo $user['pseudo']; ?></h3>
 			</div>
-			<form action="" method="POST">
-			<label for="">Pseudo :</label>
-			<input type="text" name="newpseudo" placeholder="Nouveau pseudo" value="<?php echo $user['pseudo']; ?>"><br><br>
-			<label for="">Adresse mail :</label>
-			<input type="text" name="newmail" placeholder="Nouveau mail" value="<?php echo $user['mail']; ?>"><br><br>
-			<label for="">Departement :</label>
-			<input type="text" name="newdepartement" placeholder="Nouveau departement" value="<?php echo $user['departement']; ?>"><br><br>
-			<label for="">Nouveau mot de passe :</label>
-			<input type="password" name="newmdp" placeholder="Nouveau mot de passe"><br><br>
-			<label for="">Confirmation mot de passe :</label>
-			<input type="password" name="newmdp2" placeholder="Confirmez mot de passe"><br><br>
-			<label for="">Description :</label>
-			<input type="text" name="newdescription" placeholder="Decris toi" ><br><br>
-			<input type="submit" value="confirmer les changements">
-		</form>
+			<form action="" method="POST" id="formulaire3">
+				<label for="">Pseu<span>D</span>o :</label>
+				<input id="profil2" type="text" name="newpseudo" placeholder="Nouveau pseudo" value="<?php echo $user['pseudo']; ?>"><br>
+				<label for="">A<span>D</span>resse Mail :</label>
+				<input id="profil" type="text" name="newmail" placeholder="Nouveau mail" value="<?php echo $user['mail']; ?>"><br>
+				<label for=""><span>D</span>épartement :</label>
+				<input id="profil" type="text" name="newdepartement" placeholder="Nouveau departement" value="<?php echo $user['departement']; ?>"><br>
+				<label for="">Nouveau Mot <span>D</span>e Passe :</label>
+				<input id="profil" type="password" name="newmdp" placeholder="Nouveau Mot de Passe"><br>
+				<label for="">Confirmation Mot <span>D</span>e Passe :</label>
+				<input id="profil" type="password" name="newmdp2" placeholder="Confirmez Mot de Passe"><br>
+				<label for=""><span>D</span>escription :</label><br>
+				<textarea class="form-control" rows="7"></textarea>
+				<input type="submit" value="Confirmer" id="publier">
+			</form>
 			<?php
 			  		  if(isset($erreur))
 			  		  {
