@@ -63,10 +63,10 @@ if(isset($_SESSION['id']))
 				<p class="amesoeurtext">Age: 19 ans</p>
 				<p class="amesoeurtext"><span>D</span>epartement: 01</p>
 				<p class="amesoeurtext"><span>D</span>escription: Je suis très compliquée et j'aime la couleur rose</p>
-				<a href="connect.php?id=9"><input type="submit" name="register" value="Contacter" id="publier5"/></a>
+				<a href="connect.php?id=16"><input type="submit" name="register" value="Contacter" id="publier5"/></a>
 			</div>
 			<a href="recherchefemmme.php"><input type="submit" name="register" value="Nouvelle recherche" id="publier3"/></a>
-			<a href="connect.php?id=9"><input type="submit" name="register" value="Retour Accueil" id="publier4"/></a>
+			<a href="connect.php?id=16"><input type="submit" name="register" value="Retour Accueil" id="publier4"/></a>
 		</div>
 
 
