@@ -113,7 +113,7 @@ if(isset($_SESSION['id']))
 						<td><input id="profil" type="password" name="newmdp2" placeholder="Confirmez Mot de Passe"><br></td>
 					</tr>
 					</table>
-						<label for=""><span>D</span>escription :</label><br>
+						<br><label for=""><span>D</span>escription :</label><br>
 						<textarea class="form-control" rows="7"></textarea>
 					
 						<input type="submit" value="Confirmer" id="publier">
@@ -126,7 +126,6 @@ if(isset($_SESSION['id']))
 			  	?>
 		</div>
 		
-
 		<footer>
 			<div id="footer">
 				<div class="container">
@@ -152,12 +151,13 @@ if(isset($_SESSION['id']))
 									<div class="text"><a href="" target="_blank">www.BlinDates.com</a></div>
 								</div>
 							</div>
-						</div><div class=" col-sm-3 main-el">
-						<div class="textwidget"><div class="divider divider-5"><h5>Services</h5><div class="separator"></div></div>
-							<i class="bas"></i><a href="" title="Partenaires">Partenaires</a>
-							<br/><i class="bas"></i><a href="" title="espaces publicitaires localisés">Espaces publicitaires</a><br/><i class="bas"></i>
-							<a href="">Comment ça marche ?</a><br/>
 						</div>
+						<div class=" col-sm-3 main-el">
+							<div class="textwidget"><div class="divider divider-5"><h5>Services</h5><div class="separator"></div></div>
+								<i class="bas"></i><a href="" title="Partenaires">Partenaires</a>
+								<br/><i class="bas"></i><a href="" title="espaces publicitaires localisés">Espaces publicitaires</a><br/><i class="bas"></i>
+								<a href="">Comment ça marche ?</a><br/>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -165,8 +165,7 @@ if(isset($_SESSION['id']))
 				<div id="botbar">
 					<div class="container">
 						<p class="copyright-text">
-							&#169; Copyright 2016 - <a href="/mentions-legales">Mentions légales</a> - <a href="/conditions-generales-dutilisation">Conditions générales
-							d'utilisation</a>
+							&#169; Copyright 2016 - <a href="/mentions-legales">Mentions légales</a> - <a href="/conditions-generales-dutilisation">Conditions Générales d'Utilisation</a>
 						</p>     
 					</div>
 				</div>

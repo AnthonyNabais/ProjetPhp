@@ -44,34 +44,34 @@ if(isset($_POST['forminscription']))
 								{	
 									$insertmbr = $bdd->prepare("INSERT INTO inscription(sex, nom, prenom, pseudo, mdp, mail, ddn, departement) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
 									$insertmbr->execute(array($sex, $nom, $prenom, $pseudo, $mdp, $mail, $ddn, $departement));
-									$good = "Votre compte a bien été crée!";
+									$good = "Votre compte a bien été créé!";
 								}
 								else
 								{
-									$erreur = "Departement invalide";
+									$erreur = "Département invalide";
 								}
 							}
 							else
 							{
-								$erreur = "Vos mots de passe ne correspondent pas";
+								$erreur = "Vos Mots de Passe ne correspondent pas";
 							}
 						}
 						else
 						{
-							$erreur = "Adresse mail déja utilisée";
+							$erreur = "Adresse Mail déja utilisée";
 						}
 
 					}
 
 					else
 					{
-						$erreur = "Adresse mail non valide";
+						$erreur = "Adresse Mail non valide";
 					}
 
 				}
 				else
 				{
-					$erreur = "Vos adresse mail ne correspondent pas";
+					$erreur = "Vos Adresses Mail ne correspondent pas";
 				}
 			}
 			else
@@ -105,7 +105,7 @@ if(isset($_POST['forminscription']))
 	<body>
 		<div class="contenu">
 			<div class="titre" id="un">
-			<h1 id="noidea">Blin<span>D</span>ates</h1>
+				<h1 id="noidea">Blin<span>D</span>ates</h1>
 			</div>
 			<div class="formulaire" id="gris">
 				<form  method="post" action="">
@@ -133,14 +133,16 @@ if(isset($_POST['forminscription']))
 				        <tr>
 				            
 			            	<td><label for="prenom">Votre Prenom :</label></td>
-				            <td><input type="text" placeholder="Votre Prenom" name="prenom" id="prenom" value="<?php if(isset($prenom)) {echo $prenom;} ?>"/></td>
+				            <td><input type="text" placeholder="Votre Prenom" name="prenom" id="prenom" value="<?php if(isset($prenom)) {echo $prenom;} ?>"/>
+				            </td>
 				            
 				        </tr>
 			            
 				        <tr>
 				            
-				            <td><label for="pseudo">Nom <span>D</span>e Compte :</label></td>
-				            <td><input type="text" placeholder="Votre Pseudo" name="pseudo" id="pseudo" value="<?php if(isset($pseudo)) {echo $pseudo;} ?>" /></td>
+				            <td><label for="pseudo">Pseu<span>D</span>onyme :</label></td>
+				            <td><input type="text" placeholder="Votre Pseudo" name="pseudo" id="pseudo" value="<?php if(isset($pseudo)) {echo $pseudo;} ?>"/>
+				            </td>
 				            
 			            </tr>
 				            
@@ -183,9 +185,6 @@ if(isset($_POST['forminscription']))
 					        <td><label for="departement">Votre <span>D</span>épartement :</label></td>
 					        <td><input type="text" placeholder="Votre département" name="departement" id="departement" value="<?php if(isset($departement)) {echo $departement;} ?>"/></td>
 			            </tr>
-			           	<tr>
-			           		<td></td>
-			           	</tr>
 					</table>
 					<input type="submit" name="forminscription" value="S'inscrire" id="publier2"/>
 					<a href="index.php"><input type="button" value="Retour Accueil" id="publier2"/></a>
@@ -231,12 +230,13 @@ if(isset($_POST['forminscription']))
 									<div class="text"><a href="" target="_blank">www.BlinDates.com</a></div>
 								</div>
 							</div>
-						</div><div class=" col-sm-3 main-el">
-						<div class="textwidget"><div class="divider divider-5"><h5>Services</h5><div class="separator"></div></div>
-							<i class="bas"></i><a href="" title="Partenaires">Partenaires</a>
-							<br/><i class="bas"></i><a href="" title="espaces publicitaires localisés">Espaces publicitaires</a><br/><i class="bas"></i>
-							<a href="">Comment ça marche ?</a><br/>
 						</div>
+						<div class=" col-sm-3 main-el">
+							<div class="textwidget"><div class="divider divider-5"><h5>Services</h5><div class="separator"></div></div>
+								<i class="bas"></i><a href="" title="Partenaires">Partenaires</a>
+								<br/><i class="bas"></i><a href="" title="espaces publicitaires localisés">Espaces publicitaires</a><br/><i class="bas"></i>
+								<a href="">Comment ça marche ?</a><br/>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -244,8 +244,7 @@ if(isset($_POST['forminscription']))
 				<div id="botbar">
 					<div class="container">
 						<p class="copyright-text">
-							&#169; Copyright 2016 - <a href="/mentions-legales">Mentions légales</a> - <a href="/conditions-generales-dutilisation">Conditions générales
-							d'utilisation</a>
+							&#169; Copyright 2016 - <a href="/mentions-legales">Mentions légales</a> - <a href="/conditions-generales-dutilisation">Conditions générales d'utilisation</a>
 						</p>     
 					</div>
 				</div>

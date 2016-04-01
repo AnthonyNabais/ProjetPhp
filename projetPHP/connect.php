@@ -33,11 +33,10 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
 					</div>
 					<div class="header">
 						<form class="navbar-form navbar-right" >
-						<div>
-						<h3>Bienvenue <?php echo $userinfo['pseudo']; ?></h3>
-						</div>
+							<div>
+								<h3>Bienvenue <?php echo $userinfo['pseudo']; ?></h3>
+							</div>
 						</form>
-
 						<div class="formulaire2" id="gris2">
 							<table>
 								<p id="truc2">Informations <span>D</span>u Compte</p>
@@ -95,12 +94,13 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
 										<div class="text"><a href="" target="_blank">www.BlinDates.com</a></div>
 									</div>
 								</div>
-							</div><div class=" col-sm-3 main-el">
-							<div class="textwidget"><div class="divider divider-5"><h5>Services</h5><div class="separator"></div></div>
-								<i class="bas"></i><a href="" title="Partenaires">Partenaires</a>
-								<br/><i class="bas"></i><a href="" title="espaces publicitaires localisés">Espaces publicitaires</a><br/><i class="bas"></i>
-								<a href="">Comment ça marche ?</a><br/>
 							</div>
+							<div class=" col-sm-3 main-el">
+								<div class="textwidget"><div class="divider divider-5"><h5>Services</h5><div class="separator"></div></div>
+									<i class="bas"></i><a href="" title="Partenaires">Partenaires</a>
+									<br/><i class="bas"></i><a href="" title="espaces publicitaires localisés">Espaces publicitaires</a><br/><i class="bas"></i>
+									<a href="">Comment ça marche ?</a><br/>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -108,8 +108,7 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
 					<div id="botbar">
 						<div class="container">
 							<p class="copyright-text">
-								&#169; Copyright 2016 - <a href="/mentions-legales">Mentions légales</a> - <a href="/conditions-generales-dutilisation">Conditions générales
-								d'utilisation</a>
+								&#169; Copyright 2016 - <a href="/mentions-legales">Mentions légales</a> - <a href="/conditions-generales-dutilisation">Conditions générales d'utilisation</a>
 							</p>     
 						</div>
 					</div>
@@ -119,7 +118,6 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
 			<?php
 			}
 			?>
-			
 	</body>	
 </html>	
 
